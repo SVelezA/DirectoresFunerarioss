@@ -15,7 +15,7 @@ app.config['MYSQL_PASSWORD'] = 'directoresfunerarios1'
 app.config['MYSQL_DB'] = 'directo1_funeraria'
 mysql = MySQL(app)
 
-# MySQL Session Settings
+# MySQL Session Settingsss
 
 app.secret_key = 'mysecretkey'
 
