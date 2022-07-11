@@ -1,0 +1,128 @@
+body {
+    background: #4CA1AF;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #C4E0E5, #4CA1AF);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #C4E0E5, #4CA1AF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    text-align: center;
+    
+
+}
+
+.card {
+    background: rgb(206, 206, 206);
+}
+
+.btn-5 {
+    border: 8 solid;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+    outline: 1px solid;
+    outline-color: rgba(255, 255, 255, .5);
+    outline-offset: 0px;
+    text-shadow: none;
+    transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+    background-color: rgb(98, 175, 194);
+} 
+  
+.btn-5:hover {
+    border: 1px solid;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+    outline-color: rgba(255, 255, 255, 0);
+    outline-offset: 15px;
+    text-shadow: 1px 1px 2px #427388; 
+}
+
+
+.grid-layout{
+    height: 650px;
+    display: grid;
+    grid-template-areas:    'cabecera cabecera cabecera'
+                            'contenido contenido contenido'
+                            'footer footer';
+
+    grid-template-rows: 20% auto 10%;
+}
+
+.caja {
+
+    text-align: center;
+    padding: 20px;
+}
+
+.cabecera {
+    grid-area: cabecera;
+
+    flex: auto;
+    
+}
+
+.menu {
+    grid-area: menu;
+
+
+}
+
+.contenido {   
+    grid-area: contenido;
+
+}
+
+
+.lateral {
+    grid-area: lateral;
+    background-color: beige;
+
+}
+
+.footer {
+    grid-area: footer;
+
+}
+
+.grid-layout-index {
+    height: 650px;
+    display: grid;
+    grid-template-areas: 'imagen contenido-index menusec';
+    grid-template-columns: 25% auto 20%;
+}
+
+.imagen-logo {
+    grid-area: imagen;
+    padding-top: 100px;
+    align-content: center;
+}
+
+.contenido-index {
+    grid-area: contenido-index;
+
+}
+
+.menusec {
+    grid-area: menusec;
+
+    align-content: center;
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+    padding: 2px 1px 0;
+  }
+
+.grid-layout-menusec{
+    height: 100%;
+    display: grid;
+    grid-template-columns:  'iniciobtn'
+                            'conozcanosbtn'
+                            'serviciosbtn'
+                            'cubrimientobtn'
+                            'vinculacionbtn'                           
+}
+
+.btnmenu{
+    width: 60%;    
+    text-align: center;
+}
+
+input[type="text"]{
+    font-size:small;
+}
+

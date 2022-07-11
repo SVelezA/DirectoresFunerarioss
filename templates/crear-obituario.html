@@ -1,0 +1,132 @@
+{% extends 'layout.html' %}
+
+{% block body%}
+
+<div class="col-md-50">
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    {% for message in messages %}    
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+    <div class="col-md-50 offset-md-0"> 
+            <div class ="card card-body p-2 rounded">
+                <form action="/add_obituario" method="POST">
+                    <table>
+                        <th><h1>CREAR NUEVO OBITUARIO</h1></th>
+                        <tr> 
+                            <td width="650">
+
+                                <div class="form-group border-bottom border-secondary p-2">
+                                    <p>Código de Cliente</p>
+                                    <input type="number" name="ocodigo_cliente" placeholder="Código de Cliente" value="" class="form-control">
+                                </div>
+
+                                <div class="p-1"></div>
+
+                                <div class="form-group border-bottom border-secondary p-2">
+                                    <p>Primer Apellido</p>
+                                    <input type="text" name="opapellido" placeholder="Primer Apellido" value="" class="form-control ">
+                                </div>
+
+                                <div class="p-1"></div>
+
+                                <div class="form-group border-bottom border-secondary p-2">
+                                    <p>Segundo Apellido</p>
+                                    <input type="text" name="osapellido" placeholder="Segundo Apellido" value = "" class="form-control ">
+                                </div>  
+
+                                <div class="p-1"></div>
+
+                                <div class="form-group border-bottom border-secondary p-2">
+                                    <p>Nombres</p>
+                                    <input type="text" name="onombres" placeholder="Nombres" value = "" class="form-control ">
+                                </div>
+
+                                <div class="p-1"></div>
+
+                                <div class="form-group border-bottom border-secondary p-2">
+                                    <p>ID</p>
+                                    <input type="number" name="oid" placeholder="ID" value = "" class="form-control ">
+                                </div>
+
+                                <div class="p-1"></div>
+
+                                <div class="form-group border-bottom border-secondary p-2">
+                                    <p>Dirección de Velación</p>
+                                    <input type="text" name="odir_velacion" placeholder="Dirección de Velación" value = "" class="form-control ">
+                                </div>
+
+                                <div class="form-group p-3 ">
+                                    <button type="submit" class="btn btn-success btn-block rounded">
+                                        Guardar
+                                    </button>
+                                </div>                         
+
+                            </td>
+
+                            <td width="650" class="p-1">
+                                <div class="form-group border-bottom border-secondary p-2">
+                                    <p>Ciudad</p>
+                                    <input type="text" name="ociudad" placeholder="Ciudad" value = "" class="form-control ">
+                                </div>
+
+                                <div class="p-1"></div>
+
+                                <div class="form-group border-bottom border-secondary p-2">
+                                    <p>Departamento</p>
+                                    <input type="text" name="odpto" placeholder="Departamento" value = "" class="form-control ">
+                                </div>
+
+                                <div class="p-1"></div>
+
+                                <div class="form-group border-bottom border-secondary p-2">
+                                    <p>País</p>
+                                    <input type="text" name="opais" placeholder="País" value = "" class="form-control ">
+                                </div>
+
+                                <div class="p-1"></div>
+
+                                <div class="form-group border-bottom border-secondary p-2">
+                                    <p>Fecha y Hora</p>
+                                    <input type="text" name="ofechaora" placeholder="Fecha y Hora" value = "" class="form-control ">
+                                </div>
+
+                                <div class="p-1"></div>
+
+                                <div class="form-group border-bottom border-secondary p-2">
+                                    <p>Dirección de la Parroquia</p>
+                                    <input type="text" name="odirparroquia" placeholder="Dirección de la Parroquia" value = "" class="form-control ">
+                                </div>
+
+                                <div class="p-1"></div>
+
+                                <div class="form-group border-bottom border-secondary p-2">
+                                    <p>Cementerio</p>
+                                    <input type="text" name="ocementerio" placeholder="Cementerio" value = "" class="form-control ">
+                                </div>
+
+                                <div class="p-1"></div>
+
+                                <div class="form-group border-bottom border-secondary p-2">
+                                    <p>Estado</p>
+                                    <input type="text" name="oestado" placeholder="Estado" value = "" class="form-control ">
+                                </div>
+
+
+                            </td>       
+
+                        </tr>                  
+                    
+                    </table>     
+                            
+                </form>
+            </div>        
+    </div>
+</div>
+
+{% endblock %}

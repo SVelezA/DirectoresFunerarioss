@@ -1,0 +1,49 @@
+{% extends 'layout.html' %}
+
+{% block body%}
+
+<div class="">
+
+    <div class="caja cabecera">
+        
+    </div>
+    <div class="caja contenido grid-layout-index">
+        <div class="caja imagen">
+            <img src="{{url_for('static', filename='logo-union.png')}}" class="">
+        </div> 
+        <div class="contenido-index caja">
+            <h1>SERVICIOS</h1>
+            <p> Asesoría en trámites legales.</p>            
+            <p>Coordinación y tramitación de licencias de inhumación, exhumación y cremación a nivel nacional e internacional.</p>
+            <p>Asesoría en presentación y capacitación de personal de servicios.</p>
+            <p>Asesoría en diseño y rediseño de estructura organizacional y locativa.</p>
+            <p>Asesoría en programas de mercadeo y comercialización de productos.</p>
+            <p>Actualización en nuevas técnicas y programas de desarroll.o</p>
+            <p>Orientación psicológica en la elaboración del duelo.</p>
+            <p>Asesoría en imagen, publicidad, comunicaciones e internet.</p>
+            <p>Información permanente y detallada del quehacer del sector funerario, de manera escrita, radial e informática.</p>
+        </div> 
+        
+        <div class="caja menusec">
+        
+                <button type="button" class="btn btn-light rounded btnmenu btn-5"><a  href="/">Inicio</a></button>
+                <p>&nbsp</p>
+                <button type="button" class="btn btn-light rounded btnmenu btn-5"><a  href="/conozcanos">Conózcanos</a></button>
+                <p>&nbsp</p>
+                <button type="button" class="btn btn-light rounded btnmenu btn-5"><a  href="/servicios">Servicios</a></button>
+                <p>&nbsp</p>
+                <button type="button" class="btn btn-light rounded btnmenu btn-5"><a  href="/cubrimiento">Cubrimiento</a></button>
+                <p>&nbsp</p>
+                <button type="button" class="btn btn-light rounded btnmenu btn-5"><a  href="/vinculacion">Vinculación</a></button>
+
+        </div>  
+    </div>
+    <div class="caja footer">
+        Desarrollado por Santiago Vélez
+    </div>
+
+
+
+</div>
+
+{% endblock %}

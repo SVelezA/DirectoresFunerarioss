@@ -1,0 +1,136 @@
+{% extends 'layout.html' %}
+
+{% block body%}
+
+<div class="col-md-13 offset-md-0">
+    <div class="card card-body cards">
+        <form action="/update_obituario/{{contact.0}}" method="POST">
+
+            <table>
+
+                <tr> 
+                    <td width="550">
+
+                        <div class="form-group border-bottom border-secondary p-2">
+                            <p>Código de Cliente</p>
+                            <input type="text" name="ocodigo_cliente" placeholder="ocodigo_cliente" value="{{ contact.0 }}" class="form-control">
+                        </div>
+
+                        <div class="p-1"></div>
+
+                        <div class="form-group border-bottom border-secondary p-2">
+                            <p>Primer Apellido</p>
+                            <input type="text" name="opapellido" placeholder="opapellido" value="{{ contact.2 }}" class="form-control ">
+                        </div>
+
+                        <div class="p-1"></div>
+
+                        <div class="form-group border-bottom border-secondary p-2">
+                            <p>Segundo Apellido</p>
+                            <input type="text" name="osapellido" placeholder="osapellido" value = "{{ contact.3 }}" class="form-control ">
+                        </div>  
+
+                        <div class="p-1"></div>
+
+                        <div class="form-group border-bottom border-secondary p-2">
+                            <p>Nombres</p>
+                            <input type="text" name="onombres" placeholder="onombres" value = "{{ contact.4 }}" class="form-control ">
+                        </div>
+
+                        <div class="p-1"></div>
+
+                        <div class="form-group border-bottom border-secondary p-2">
+                            <p>ID</p>
+                            <input type="text" name="oid" placeholder="oid" value = "{{ contact.5 }}" class="form-control ">
+                        </div>
+
+                        <div class="p-1"></div>
+
+                        <div class="form-group border-bottom border-secondary p-2">
+                            <p>Dirección de Velación</p>
+                            <input type="text" name="odir_velacion" placeholder="odir_velacion" value = "{{ contact.6 }}" class="form-control ">
+                        </div>
+
+                        <div class="form-group p-3 ">
+                            <button type="submit" class="btn btn-success btn-block rounded">
+                                Guardar
+                            </button>
+                        </div>                         
+
+                    </td>
+
+                    <td width="650" class="p-5">
+                        <div class="form-group border-bottom border-secondary p-2">
+                            <p>Ciudad</p>
+                            <input type="text" name="ociudad" placeholder="ociudad" value = "{{ contact.7 }}" class="form-control ">
+                        </div>
+
+                        <div class="p-1"></div>
+
+                        <div class="form-group border-bottom border-secondary p-2">
+                            <p>Departamento</p>
+                            <input type="text" name="odpto" placeholder="odpto" value = "{{ contact.8 }}" class="form-control ">
+                        </div>
+
+                        <div class="p-1"></div>
+
+                        <div class="form-group border-bottom border-secondary p-2">
+                            <p>País</p>
+                            <input type="text" name="opais" placeholder="opais" value = "{{ contact.9 }}" class="form-control ">
+                        </div>
+
+                        <div class="p-1"></div>
+
+                        <div class="form-group border-bottom border-secondary p-2">
+                            <p>Fecha y Hora</p>
+                            <input type="text" name="ofechaora" placeholder="ofechaora" value = "{{ contact.10 }}" class="form-control ">
+                        </div>
+
+                        <div class="p-1"></div>
+
+                        <div class="form-group border-bottom border-secondary p-2">
+                            <p>Dirección de la Parroquia</p>
+                            <input type="text" name="odirparroquia" placeholder="odirparroquia" value = "{{ contact.11 }}" class="form-control ">
+                        </div>
+
+                        <div class="p-1"></div>
+
+                        <div class="p-1"></div>
+
+                        <div class="form-group border-bottom border-secondary p-2">
+                            <p>Nombre de la Parroquia</p>
+                            <input type="text" name="onomparroquia" placeholder="onombparroquia" value = "{{ contact.11 }}" class="form-control ">
+                        </div>
+
+                        <div class="p-1"></div>
+
+
+                        <div class="form-group border-bottom border-secondary p-2">
+                            <p>Cementerio</p>
+                            <input type="text" name="ocementerio" placeholder="ocementerio" value = "{{ contact.12 }}" class="form-control ">
+                        </div>
+
+                        <div class="p-1"></div>
+
+                        <div class="form-group border-bottom border-secondary p-2">
+                            <p>Estado</p>
+                            <input type="text" name="oestado" placeholder="oestado" value = "{{ contact.17 }}" class="form-control ">
+                        </div>
+
+
+                    </td>       
+
+                </tr>                   
+
+                <tr>
+                                 
+                </tr>
+                
+            </table>
+                  
+
+        </form>
+    </div>    
+</div>
+
+{% endblock %}

@@ -1,0 +1,62 @@
+{% extends 'layout.html' %}
+
+{% block body%}
+
+<div class="">
+
+    <div class="caja cabecera">
+        <p>&nbsp</p>
+    </div>
+    <div class="caja contenido grid-layout-index">
+        <div class="caja imagen">
+            <img src="{{url_for('static', filename='logo-union.png')}}" class="" style="width:100%">
+        </div> 
+        <div class="contenido-index caja">
+            <h1>CONÓZCANOS</h1>
+            <h5>Breve reseña histórica:</h5>
+            <p>La Línea Internacional de Directores Funerarios nace el 6 de abril del año 2000
+                en notaría pública de la ciudad de Medellín y registrada en la Cámara de Comercio, 
+                obedeciendo a la necesidad del sector funerario, en especial el de provincia, que de manera
+                constante requiere asesoría y alianzas estratégicas para reliazar servicios intermunicipales, 
+                entre departamentos e internacionales. Desde ese momento la Línea Internacional de Directores
+                Funerarios se ha encargado, con éxito, de establecer puentes entre las funerarias, agrupar las
+                mismas como gremio y buscar fortalecer el ramo en cuanto a programas de capacitación, tecnología
+                de punta y operatividad con eficiencia y eficacia. En la actualidad se tiene cubrimiento nacional
+                y acuerdos de cooperación internacional.
+            </p>
+            <p>&nbsp</p>
+            <h5>MISION</h5>
+            <p>Velar por la óptima presentación del servicio funerario al ser éste requerido por algunas de las funerarias
+                afiliadas a la línea, siempre partiendo del objetivo de lograr una cooperación integral que permita beneficios
+                institucionales y económicos para el sector.
+            </p>
+            <p>&nbsp</p>
+            <h5>VISION</h5>
+            <p>Con la unión de un significativo número de funerarias, el incremento de afiliaciones en contratos pre-exequiales
+                se fortalecerá en la prestación del servicio, permitiendo que el usuario, nuestra razón de ser, reciba de manera
+                oportuna y con alta calidad todos los beneficios que acordó al momento de elegir su funeraria.</p>
+        </div> 
+        
+        <div class="caja menusec">
+        
+                <button type="button" class="btn btn-light rounded btnmenu btn-5"><a  href="/">Inicio</a></button>
+                <p>&nbsp</p>
+                <button type="button" class="btn btn-light rounded btnmenu btn-5"><a  href="/conozcanos">Conózcanos</a></button>
+                <p>&nbsp</p>
+                <button type="button" class="btn btn-light rounded btnmenu btn-5"><a  href="/servicios">Servicios</a></button>
+                <p>&nbsp</p>
+                <button type="button" class="btn btn-light rounded btnmenu btn-5"><a  href="/cubrimiento" width="100%">Cubrimiento</a></button>
+                <p>&nbsp</p>
+                <button type="button" class="btn btn-light rounded btnmenu btn-5" width="100%"><a  href="/vinculacion">Vinculación</a></button>
+
+        </div>  
+    </div>
+    <div class="caja footer">
+        Desarrollado por Santiago Vélez
+    </div>
+
+
+
+</div>
+
+{% endblock %}

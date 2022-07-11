@@ -1,0 +1,151 @@
+{% extends 'layout.html' %}
+
+{% block body%}
+
+<div class="col-md-13 offset-md-0">
+    <div class="card card-body cards">
+        <form action="/update_vinculacion/{{contact.16}}" method="POST">
+
+            <table>
+
+                <tr> 
+                    <td width="650">
+                        <div class="form-group border-bottom border-secondary p-2">
+                            <p>NIT:</p>
+                            <input type="number" name="vnit" placeholder="CNIT" value="{{ contact.1 }}" class="form-control">
+                        </div>
+
+                        <div class="p-1"></div>
+
+                        <div class="form-group border-bottom border-secondary p-2">
+                            <p>Razón Social:</p>
+                            <input type="text" name="vrazon_social" placeholder="Razon Social" value="{{ contact.2 }}" class="form-control ">
+                        </div>
+
+                        <div class="p-1"></div>
+
+                        <div class="form-group border-bottom border-secondary p-2">
+                            <p>Dirección:</p>
+                            <input type="text" name="vdireccion" placeholder="Dirección" value = "{{ contact.3 }}" class="form-control ">
+                        </div>  
+
+                        <div class="p-1"></div>
+
+                        <div class="form-group border-bottom border-secondary p-2">
+                            <p>Teléfono:</p>
+                            <input type="number" name="vtelefono" placeholder="Teléfono" value = "{{ contact.4 }}" class="form-control ">
+                        </div>
+
+                        <div class="p-1"></div>
+
+                        <div class="form-group border-bottom border-secondary p-2">
+                            <p>Correo Electrónico:</p>
+                            <input type="text" name="vcorreo" placeholder="Correo Electrónico" value = "{{ contact.5 }}" class="form-control ">
+                        </div>
+
+                        <div class="p-1"></div>
+
+                        <div class="form-group border-bottom border-secondary p-2">
+                            <p>Ciudad:</p>
+                            <input type="text" name="vciudad" placeholder="Ciudad" value = "{{ contact.6 }}" class="form-control ">
+                        </div>                                                     
+
+                        <div class="p-1"></div>
+
+                        <div class="form-group border-bottom border-secondary p-2">
+                            <p>Departamento:</p>
+                            <input type="text" name="vdpto" placeholder="Departamento" value = "{{ contact.7 }}" class="form-control ">
+                        </div>                                
+
+                        <div class="p-1"></div>
+
+                        <div class="form-group border-bottom border-secondary p-2">
+                            <p>País:</p>
+                            <input type="text" name="vpais" placeholder="País" value = "{{ contact.8 }}" class="form-control ">
+                        </div>
+
+                        <div class="p-1"></div>
+
+                        <div class="form-group border-bottom border-secondary p-2">
+                            <p>Página Web:</p>
+                            <input type="text" name="vurl" placeholder="Página Web:" value = "{{ contact.9 }}" class="form-control ">
+                        </div>
+
+                        <div class="form-group p-3 ">
+                            <button type="submit" class="btn btn-success btn-block rounded">
+                                Guardar
+                            </button>
+                        </div>
+
+                    </td>
+                    
+
+                    <td width="650" class="p-1">
+
+                        
+
+                        <div class="p-1"></div>
+
+                        <div class="form-group border-bottom border-secondary p-2">
+                            <p>Primer Apellido:</p>
+                            <input type="text" name="vrep_papellido" placeholder="Primer Apellido" value = "{{ contact.10 }}" class="form-control ">
+                        </div>
+
+                        <div class="p-1"></div>
+
+                        <div class="form-group border-bottom border-secondary p-2">
+                            <p>Segundo Apellido:</p>
+                            <input type="text" name="vrep_sapellido" placeholder="Segundo Apellido" value = "{{ contact.11 }}" class="form-control ">
+                        </div>
+
+                        <div class="p-1"></div>
+
+                        <div class="form-group border-bottom border-secondary p-2">
+                            <p>Nombres:</p>
+                            <input type="text" name="vrep_nombres" placeholder="Nombres" value = "{{ contact.12 }}" class="form-control ">
+                        </div>
+
+                        <div class="p-1"></div>
+
+                        <div class="form-group border-bottom border-secondary p-2">
+                            <p>Documento de Identidad</p>
+                            <input type="number" name="vrep_documento" placeholder="Documento de Identidad" value = "{{ contact.13 }}" class="form-control ">
+                        </div>
+
+                        <div class="p-1"></div>
+
+                        <div class="form-group border-bottom border-secondary p-2">
+                            <p>Celular</p>
+                            <input type="number" name="vrep_celular" placeholder="Celular" value = "{{ contact.14 }}" class="form-control ">
+                        </div>
+
+                        <div class="p-1"></div>
+
+                        <div class="form-group border-bottom border-secondary p-2">
+                            <p>Correo Electrónico</p>
+                            <input type="text" name="vrep_correo" placeholder="Correo Electrónico" value = "{{ contact.15 }}" class="form-control ">
+                        </div>
+
+                        <div class="p-1"></div>
+
+                        <div class="form-group border-bottom border-secondary p-2">
+                            <p>Código del Contrato</p>
+                            <input type="text" name="vcodigo_contrato" placeholder="Código del Contrato" value = "{{ contact.16 }}" class="form-control ">
+                        </div>
+
+                    </td>         
+
+                </tr>                   
+
+                <tr>
+                                 
+                </tr>
+                
+            </table>
+                  
+
+        </form>
+    </div>    
+</div>
+
+{% endblock %}

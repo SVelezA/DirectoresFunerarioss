@@ -1,0 +1,82 @@
+{% extends 'layout.html' %}
+
+{% block body%}
+
+<div class="col-md-30 rounded">
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    {% for message in messages %}    
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+    <h1 class="diplay-1 text-center">TABLA JARDIN DE ETERNA MEMORIA</h1>
+    <p class="align-center"><button class="btn btn-success rounded"><a class="nav-link" href="/crear-eterna">Crear Nueva Entrada</a></button>  </p>  
+
+    <table class="table table-stripped table-bordered bg-white table-sm rounded text-center align-center">
+        <thead>
+            <tr>
+                <td>ACODIGO_CLIENTE</td>
+                <td>APAPELLIDO</td>
+                <td>ASAPELLIDO</td>
+                <td>ANOMBRES</td>
+                <td>AID</td>
+                <td width="600">ABIOGRAFIA</td>
+                <td>ADIR_VELACION</td>
+                <td>ACIUDAD</td>
+                <td>ADPTO</td>
+                <td>APAIS</td>
+                <td>AFECHAORA</td>
+                <td>ADIRPARROQUIA</td>
+                <td>ANOM_PARROQUIA</td>
+                <td>ACEMENTERIO</td>
+                <td>AESTADO</td>
+                <td>ALOCALIZACION_TUMBA</td>
+                <td>ACICLODEVIDA</td>
+                <td>AACTIVAR</td>
+                <td>PIE1</td>
+                <td>PIE2</td>
+                <td>PIE3</td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for contact in contacts %}
+                <tr>
+                    <td>{{ contact.0 }}</td>
+                    <td>{{ contact.2 }}</td>
+                    <td>{{ contact.3 }}</td>
+                    <td>{{ contact.4 }}</td>
+                    <td>{{ contact.5 }}</td>
+                    <td>{{ contact.6 }}</td>
+                    <td>{{ contact.7 }}</td>
+                    <td>{{ contact.8 }}</td>
+                    <td>{{ contact.9 }}</td>
+                    <td>{{ contact.10 }}</td>
+                    <td>{{ contact.11 }}</td>
+                    <td>{{ contact.12 }}</td>
+                    <td>{{ contact.13 }}</td>
+                    <td>{{ contact.14 }}</td>
+                    <td>{{ contact.17 }}</td>
+                    <td>{{ contact.19 }}</td>
+                    <td>{{ contact.21 }}</td>
+                    <td>{{ contact.22 }}</td>
+                    <td>{{ contact.23 }}</td>
+                    <td>{{ contact.24 }}</td>
+                    <td>{{ contact.25 }}</td>
+                    <td>
+                        <a href="/edit-eterna/{{ contact.0 }}" class="btn btn-secondary border-secondary p-2">Editar</a>
+                        <p class = "p-1">  </p>
+                        <a href="/delete_eterna/{{ contact.0 }}" class="btn btn-danger p-2">Borrar</a>
+                    </td>
+                </tr>
+            {% endfor %}
+    
+        </tbody>
+    </table>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,179 @@
+{% extends 'layout.html' %}
+
+{% block body%}
+
+<div class="">
+
+    <div class="caja cabecera">
+        CABECERA
+    </div>
+    <div class="caja contenido grid-layout-index">
+        <div class="caja imagen">
+            <img src="{{url_for('static', filename='logo-union.png')}}" class="">
+        </div> 
+        <div class="contenido-index caja">
+            <div class ="card card-body p-2 rounded">
+                <!-- VINCULACION -->
+                <h1> FORMULARIO DE VINCULACIÓN</h1>
+                <form action="/add_vinculacion" method="POST">
+                    <table>
+                        <th>Datos de la Empresa</th>
+                        <th>Datos del Representante Legal</th>
+                         <tr>                             
+                            <td width="650">
+                                <div class="form-group border-bottom border-secondary p-2">
+                                    <p>NIT:</p>
+                                    <input type="text" name="vnit" placeholder="NIT" value="" class="form-control">
+                                </div>
+
+                                <div class="p-1"></div>
+
+                                <div class="form-group border-bottom border-secondary p-2">
+                                    <p>Razón Social:</p>
+                                    <input type="text" name="vrazon_social" placeholder="Razon Social" value="" class="form-control ">
+                                </div>
+
+                                <div class="p-1"></div>
+
+                                <div class="form-group border-bottom border-secondary p-2">
+                                    <p>Dirección:</p>
+                                    <input type="text" name="vdireccion" placeholder="Dirección" value = "" class="form-control ">
+                                </div>  
+
+                                <div class="p-1"></div>
+
+                                <div class="form-group border-bottom border-secondary p-2">
+                                    <p>Teléfono:</p>
+                                    <input type="text" name="vtelefono" placeholder="Teléfono" value = "" class="form-control ">
+                                </div>
+
+                                <div class="p-1"></div>
+
+                                <div class="form-group border-bottom border-secondary p-2">
+                                    <p>Correo Electrónico:</p>
+                                    <input type="text" name="vcorreo" placeholder="Correo Electrónico" value = "" class="form-control ">
+                                </div>
+
+                                <div class="p-1"></div>
+
+                                <div class="form-group border-bottom border-secondary p-2">
+                                    <p>Ciudad:</p>
+                                    <input type="text" name="vciudad" placeholder="Ciudad" value = "" class="form-control ">
+                                </div>                                                     
+
+                                <div class="p-1"></div>
+
+                                <div class="form-group border-bottom border-secondary p-2">
+                                    <p>Departamento:</p>
+                                    <input type="text" name="vdpto" placeholder="Departamento" value = "" class="form-control ">
+                                </div>                                
+
+                                <div class="p-1"></div>
+
+                                <div class="form-group border-bottom border-secondary p-2">
+                                    <p>País:</p>
+                                    <input type="text" name="vpais" placeholder="País" value = "" class="form-control ">
+                                </div>
+
+                                <div class="p-1"></div>
+
+                                <div class="form-group border-bottom border-secondary p-2">
+                                    <p>Página Web:</p>
+                                    <input type="text" name="vurl" placeholder="Página Web:" value = "" class="form-control ">
+                                </div>
+
+                                <div class="form-group p-3 ">
+                                    <button type="submit" class="btn btn-success btn-block rounded">
+                                        Guardar
+                                    </button>
+                                </div>
+
+                            </td>
+                            
+
+                            <td width="650" class="p-1">
+
+                                
+
+                                <div class="p-1"></div>
+
+                                <div class="form-group border-bottom border-secondary p-2">
+                                    <p>Primer Apellido:</p>
+                                    <input type="text" name="vrep_papellido" placeholder="Primer Apellido" value = "" class="form-control ">
+                                </div>
+
+                                <div class="p-1"></div>
+
+                                <div class="form-group border-bottom border-secondary p-2">
+                                    <p>Segundo Apellido:</p>
+                                    <input type="text" name="vrep_sapellido" placeholder="Segundo Apellido" value = "" class="form-control ">
+                                </div>
+
+                                <div class="p-1"></div>
+
+                                <div class="form-group border-bottom border-secondary p-2">
+                                    <p>Nombres:</p>
+                                    <input type="text" name="vrep_nombres" placeholder="Nombres" value = "" class="form-control ">
+                                </div>
+
+                                <div class="p-1"></div>
+
+                                <div class="form-group border-bottom border-secondary p-2">
+                                    <p>Documento de Identidad</p>
+                                    <input type="text" name="vrep_documento" placeholder="Documento de Identidad" value = "" class="form-control ">
+                                </div>
+
+                                <div class="p-1"></div>
+
+                                <div class="form-group border-bottom border-secondary p-2">
+                                    <p>Celular</p>
+                                    <input type="text" name="vrep_celular" placeholder="Celular" value = "" class="form-control ">
+                                </div>
+
+                                <div class="p-1"></div>
+
+                                <div class="form-group border-bottom border-secondary p-2">
+                                    <p>Correo Electrónico</p>
+                                    <input type="text" name="vrep_correo" placeholder="Correo Electrónico" value = "" class="form-control ">
+                                </div>
+
+                                <div class="p-1"></div>
+
+                                <div class="form-group border-bottom border-secondary p-2">
+                                    <p>Código del Contrato</p>
+                                    <input type="text" name="vcodigo_contrato" placeholder="Código del Contrato" value = "" class="form-control ">
+                                </div>
+
+                            </td>       
+
+                        </tr>                  
+                    
+                    </table>     
+                            
+                </form>
+            </div>        
+        </div> 
+        
+        <div class="caja menusec">
+        
+                <button type="button" class="btn btn-light rounded btnmenu btn-5"><a  href="/">Inicio</a></button>
+                <p>&nbsp</p>
+                <button type="button" class="btn btn-light rounded btnmenu btn-5"><a  href="/conozcanos">Conózcanos</a></button>
+                <p>&nbsp</p>
+                <button type="button" class="btn btn-light rounded btnmenu btn-5"><a  href="/servicios">Servicios</a></button>
+                <p>&nbsp</p>
+                <button type="button" class="btn btn-light rounded btnmenu btn-5"><a  href="/cubrimiento">Cubrimiento</a></button>
+                <p>&nbsp</p>
+                <button type="button" class="btn btn-light rounded btnmenu btn-5"><a  href="/vinculacion">Vinculación</a></button>
+
+        </div>  
+    </div>
+    <div class="caja footer">
+        Desarrollado por Santiago Vélez
+    </div>
+
+
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends 'layout.html' %}
+
+{% block body%}
+
+<div class="">
+
+    <div class="caja cabecera">
+        CABECERA
+    </div>
+    <div class="caja contenido grid-layout-index">
+        <div class="caja imagen">
+            <img src="{{url_for('static', filename='logo-union.png')}}" class="">
+        </div> 
+        <div class="contenido-index caja">
+            <P>CUBRIMIENTO</P>
+        </div> 
+        
+        <div class="caja menusec">
+        
+                <button type="button" class="btn btn-light rounded btnmenu btn-5"><a  href="/">Inicio</a></button>
+                <p>&nbsp</p>
+                <button type="button" class="btn btn-light rounded btnmenu btn-5"><a  href="/conozcanos">Conózcanos</a></button>
+                <p>&nbsp</p>
+                <button type="button" class="btn btn-light rounded btnmenu btn-5"><a  href="/servicios">Servicios</a></button>
+                <p>&nbsp</p>
+                <button type="button" class="btn btn-light rounded btnmenu btn-5"><a  href="/cubrimiento">Cubrimiento</a></button>
+                <p>&nbsp</p>
+                <button type="button" class="btn btn-light rounded btnmenu btn-5"><a  href="/vinculacion">Vinculación</a></button>
+
+        </div>  
+    </div>
+    <div class="caja footer">
+        Desarrollado por Santiago Vélez
+    </div>
+
+
+
+</div>
+
+{% endblock %}

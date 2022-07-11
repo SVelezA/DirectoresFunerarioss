@@ -1,0 +1,77 @@
+{% extends 'layout.html' %}
+
+{% block body%}
+
+<div class="col-md-50">
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    {% for message in messages %}    
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+    <div class="col-md-50 offset-md-0"> 
+            <div class ="card card-body p-2 rounded">
+                <form action="/add_condolencias" method="POST">
+                    <table>
+                        <th><h1>CREAR NUEVA ENTRADA</h1></th>
+                        <tr> 
+                            <td width="650">
+
+                                <div class="form-group border-bottom border-secondary p-2">
+                                    <p>Documento del Difunto</p>
+                                    <input type="number" name="cdoc_difunto" placeholder="Documento del Difunto" value="" class="form-control">
+                                </div>
+
+                                <div class="p-1"></div>
+
+                                <div class="form-group border-bottom border-secondary p-2">
+                                    <p>Condolencias</p>
+                                    <input type="text" name="ccondolencias" placeholder="Condolencias" value="" class="form-control ">
+                                </div>
+
+                                <div class="p-1"></div>
+
+                                <div class="form-group border-bottom border-secondary p-2">
+                                    <p>Remitente</p>
+                                    <input type="text" name="cremitente" placeholder="Remitente" value = "" class="form-control ">
+                                </div>  
+
+                                <div class="p-1"></div>
+
+                                <div class="form-group border-bottom border-secondary p-2">
+                                    <p>Teléfono del Remitente</p>
+                                    <input type="text" name="ctel_remitente" placeholder="Teléfono del Remitente" value = "" class="form-control ">
+                                </div>
+
+                                <div class="p-1"></div>
+
+                                <div class="form-group border-bottom border-secondary p-2">
+                                    <p>Dirección del Remitente</p>
+                                    <input type="number" name="cdir_remite" placeholder="Direccion del Remitent" value = "e" class="form-control ">
+                                </div>
+
+                                <div class="p-1"></div>                      
+
+                                <div class="form-group border-bottom border-secondary p-2">
+                                    <p>Correo del Remitente</p>
+                                    <input type="text" name="ccorreo_remite" placeholder="Correo del Remitente" value = "" class="form-control ">
+                                </div>                                                    
+
+
+
+                            </td>       
+
+                        </tr>                  
+                    
+                    </table>     
+                            
+                </form>
+            </div>        
+    </div>
+</div>
+
+{% endblock %}

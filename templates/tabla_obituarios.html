@@ -1,0 +1,75 @@
+{% extends 'layout.html' %}
+
+{% block body%}
+
+<div class="col-md-10 rounded">
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    {% for message in messages %}    
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+    
+
+
+    <table class="table table-stripped table-bordered bg-white table-sm rounded text-center align-center">
+        <thead>
+            <tr><h1 class="diplay-1 text-center">TABLA OBITUARIOS</h1></tr>
+            <tr><h2 value="">{% print ("Usuario: "+ user)%}</h2></tr>
+           
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th><button class="btn btn-success rounded"><a class="nav-link" href="/crear-obituario">Crear Nuevo Obituario</a></button></th>           
+            <tr>
+                <td>OCODIGOCLIENTE</td>
+                <td>OPAPELLIDO</td>
+                <td>OSAPELLIDO</td>
+                <td>ONOMBRES</td>
+                <td>OID</td>
+                <td>ODIR_VELACION</td>
+                <td>OCIUDAD</td>
+                <td>ODPTO</td>
+                <td>OPAIS</td>
+                <td>OFECHAORA</td>
+                <td>ODIRPARROQUIA</td>
+                <td>OCEMENTERIO</td>
+                <td>OESTADO</td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for contact in contacts %}
+                <tr>
+                    <td>{{ contact.0 }}</td>
+                    <td>{{ contact.2 }}</td>
+                    <td>{{ contact.3 }}</td>
+                    <td>{{ contact.4 }}</td>
+                    <td>{{ contact.5 }}</td>
+                    <td>{{ contact.6 }}</td>
+                    <td>{{ contact.7 }}</td>
+                    <td>{{ contact.8 }}</td>
+                    <td>{{ contact.9 }}</td>
+                    <td>{{ contact.10 }}</td>
+                    <td>{{ contact.11 }}</td>
+                    <td>{{ contact.12 }}</td>
+                    <td>{{ contact.17 }}</td>
+                    <td>
+                        <a href="/edit-obituario/{{ contact.0 }}" class="btn btn-secondary border-secondary p-2">Editar</a>
+                        <p class = "p-1">  </p>
+                        <a href="/delete_obituario/{{ contact.0 }}" class="btn btn-danger p-2">Borrar</a>
+                    </td>
+                </tr>
+            {% endfor %}
+    
+        </tbody>
+    </table>
+
+</div>
+
+{% endblock %}

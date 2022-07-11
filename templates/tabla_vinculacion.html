@@ -1,0 +1,81 @@
+{% extends 'layout.html' %}
+
+{% block body%}
+
+<div class="col-md-10 rounded">
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    {% for message in messages %}    
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}   
+
+
+    <table class="table table-stripped table-bordered bg-white table-sm rounded text-center align-center">
+        <thead>
+            <tr><h1 class="diplay-1 text-center">TABLA VINCULACION</h1></tr>           
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th><button class="btn btn-success rounded"><a class="nav-link" href="/vinculacion">Crear Nuevo Contrato</a></button></th>           
+            <tr>
+                <td>ID</td>
+                <td>VNIT</td>
+                <td>VRAZON_SOCIAL</td>
+                <td>VDIRECCION</td>
+                <td>VTELEFONO</td>
+                <td>VCORREO</td>
+                <td>VCIUDAD</td>
+                <td>VDEPTO</td>
+                <td>VPAIS</td>
+                <td>VURL</td>
+                <td>VREP_PAPELLIDO</td>
+                <td>VREP_SAPELLIDO</td>
+                <td>VREP_NOMBRES</td>
+                <td>VREP_DOCUMENTO</td>
+                <td>VREP_CELULAR</td>
+                <td>VREP_CORREO</td> 
+                <td>VCODIGO_CONTRATO</td>               
+
+            </tr>
+        </thead>
+        <tbody>
+            {% for contact in contacts %}
+                <tr>
+                    <td>{{ contact.0 }}</td>
+                    <td>{{ contact.1 }}</td>
+                    <td>{{ contact.2 }}</td>
+                    <td>{{ contact.3 }}</td>
+                    <td>{{ contact.4 }}</td>
+                    <td>{{ contact.5 }}</td>
+                    <td>{{ contact.6 }}</td>
+                    <td>{{ contact.7 }}</td>
+                    <td>{{ contact.8 }}</td>
+                    <td>{{ contact.9 }}</td>
+                    <td>{{ contact.10 }}</td>
+                    <td>{{ contact.11 }}</td>
+                    <td>{{ contact.12 }}</td>
+                    <td>{{ contact.13 }}</td>
+                    <td>{{ contact.14 }}</td>
+                    <td>{{ contact.15 }}</td>
+                    <td>{{ contact.16 }}</td>
+                    <td>
+                        <a href="/edit-vinculacion/{{ contact.16 }}" class="btn btn-secondary border-secondary p-2">Editar</a>
+                        <p class = "p-1">  </p>
+                        <a href="/delete-vinculacion/{{ contact.16 }}" class="btn btn-danger p-2">Borrar</a>
+                    </td>
+                </tr>
+            {% endfor %}
+    
+        </tbody>
+    </table>
+
+</div>
+
+{% endblock %}

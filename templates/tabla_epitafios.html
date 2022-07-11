@@ -1,0 +1,51 @@
+{% extends 'layout.html' %}
+
+{% block body%}
+
+<div class="col-md-10 rounded">
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    {% for message in messages %}    
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+    <h1 class="diplay-1 text-center">TABLA EPITAFIOS</h1>
+
+    <table class="table table-stripped table-bordered bg-white table-sm rounded text-center align-center">
+        <thead>
+            <tr>
+                <td>EDOC_DIFUNTO</td>
+                <td width="350">ECONDOLENCIAS</td>
+                <td>EREMITENTE</td>
+                <td>ETEL_REMITE</td>
+                <td>EDIR_REMITE</td>
+                <td>ECORREO_REMITE</td>                
+            </tr>
+        </thead>
+        <tbody>
+            {% for contact in contacts %}
+                <tr>
+                    <td>{{ contact.0 }}</td>
+                    <td>{{ contact.1 }}</td>
+                    <td>{{ contact.2 }}</td>
+                    <td>{{ contact.3 }}</td>
+                    <td>{{ contact.4 }}</td>
+                    <td>{{ contact.5 }}</td>
+                    <td>
+                        <a href="/edit-obituario/{{ contact.0 }}" class="btn btn-secondary border-secondary p-2">Editar</a>
+                        <p class = "p-1">  </p>
+                        <a href="/delete/{{ contact.0 }}" class="btn btn-danger p-2">Borrar</a>
+                    </td>
+                </tr>
+            {% endfor %}
+    
+        </tbody>
+    </table>
+
+</div>
+
+{% endblock %}

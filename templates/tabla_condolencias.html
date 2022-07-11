@@ -1,0 +1,54 @@
+{% extends 'layout.html' %}
+
+{% block body%}
+
+<div class="col-md-10 rounded">
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    {% for message in messages %}    
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+    <h1 class="diplay-1 text-center">TABLA CONDOLENCIAS</h1>
+    
+    
+
+    <table class="table table-stripped table-bordered bg-white table-sm rounded text-center align-center">
+        <thead>
+             <th><button class="btn btn-success rounded"><a class="nav-link" href="/crear-condolencias">Crear Nueva Entrada</a></button></th>
+            <tr>
+                <td>CDOC_DIFUNTO</td>
+                <td width="350">CCONDOLENCIAS</td>
+                <td>CREMITENTE</td>
+                <td>CTEL_REMITEN</td>
+                <td>CDIR_REMITE</td>
+                <td>CCORREO_REMITE</td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for contact in contacts %}
+                <tr>
+                    <td>{{ contact.0 }}</td>
+                    <td>{{ contact.6 }}</td>
+                    <td>{{ contact.7 }}</td>
+                    <td>{{ contact.8 }}</td>
+                    <td>{{ contact.9 }}</td>
+                    <td>{{ contact.10 }}</td>
+                    <td>
+                        <a href="/edit-condolencias/{{ contact.0 }}" class="btn btn-secondary border-secondary p-2">Editar</a>
+                        <p class = "p-1">  </p>
+                        <a href="/delete-condolencias/{{ contact.0 }}" class="btn btn-danger p-2">Borrar</a>
+                    </td>
+                </tr>
+            {% endfor %}
+    
+        </tbody>
+    </table>
+
+</div>
+
+{% endblock %}
